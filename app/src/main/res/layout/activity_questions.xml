@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d1df80"
+    tools:context=".QuestionsActivity"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end">
+
+            <ImageButton
+                android:id="@+id/exitButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                android:background="@drawable/reset_button_background"
+                android:src="@drawable/exit"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/previousButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                android:background="@drawable/button_background"
+                android:src="@drawable/leftarrow"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"/>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1"/>
+
+            <ImageButton
+                android:id="@+id/resetButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:padding="10dp"
+                android:background="@drawable/reset_button_background"
+                android:src="@drawable/refresh"
+                android:scaleType="fitCenter"
+                android:adjustViewBounds="true"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/timer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="16dp"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:id="@+id/questionId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:paddingTop="20dp"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:text="Sample Question"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:max="10"
+                android:minHeight="50dp"
+                android:progress="0"
+                android:indeterminate="false"
+                style="?android:attr/progressBarStyleHorizontal"
+                />
+
+            <TextView
+                android:id="@+id/quizProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="15dp"
+                android:textColorHint="#757575"
+                android:textSize="14sp"
+                tools:text="0/10"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/optionOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/option_background"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="A" />
+
+        <TextView
+            android:id="@+id/optionTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/option_background"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="B" />
+
+        <TextView
+            android:id="@+id/optionThree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/option_background"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="C" />
+
+        <TextView
+            android:id="@+id/optionFour"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/option_background"
+            android:gravity="center"
+            android:padding="15dp"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            tools:text="D" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/submitButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_background"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/cheatButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_background"
+            android:text="Cheat"
+            android:textColor="@color/white"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/cheatTokens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cheat tokens remaining: 3"
+            android:layout_marginTop="8dp"
+            android:layout_gravity="center"
+            android:layout_below="@+id/cheatButton"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</ScrollView>
